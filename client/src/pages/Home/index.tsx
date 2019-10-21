@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Header from "../../components/Header";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -11,6 +12,11 @@ const Home = () => {
   }, []);
   return (
     <div>
+      <Header />
+      <img
+        src="http://img-cf.kurly.com/shop/data/main/1/pc_img_1571045589.jpg"
+        alt="메인이미지"
+      />
       {products.map((product: any) => {
         return (
           <div key={product.id}>
