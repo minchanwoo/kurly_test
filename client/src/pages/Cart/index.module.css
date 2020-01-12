@@ -1,0 +1,35 @@
+.cartPage {
+  width: 100%;
+}
+
+.table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: right;
+  line-height: 1.5;
+}
+
+.table thead th {
+  padding: 15px;
+  font-weight: bold;
+  color: #514859;
+  border-bottom: 3px solid #512772;
+}
+
+.table tbody td {
+  width: 150px;
+  color: #514859;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.total_price {
+  text-align: center;
+  border: 2px solid #ccc;
+  width: 150px;
+  height: 100px;
+  line-height: 100px;
+  color: #514859;
+  margin: 0 auto;
+  margin-top: 25px;
+}

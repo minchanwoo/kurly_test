@@ -1,0 +1,25 @@
+.table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: right;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.table thead th {
+  padding: 15px;
+  font-weight: bold;
+  color: #514859;
+  border-bottom: 3px solid #512772;
+}
+
+.table tbody td {
+  width: 150px;
+  color: #514859;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.question_text {
+  background-color: #eee;
+}

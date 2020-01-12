@@ -3,10 +3,32 @@
   height: 180px;
 }
 
-.header > .header_logo {
+.header_links {
+  text-align: right;
+  font-size: 12px;
+  padding-right: 150px;
+  margin-top: 10px;
+}
+
+.header_links > a {
+  text-decoration: none;
+}
+
+.header_links > a.signup {
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
+  margin-right: 10px;
+  color: #5f0080;
+}
+
+.header_links > a:not(.signup) {
+  color: #333;
+}
+
+.header .header_logo {
   width: 103px;
   height: 79px;
-  margin-top: 25px;
+  margin-top: 12px;
   margin-bottom: 5px;
 }
 
@@ -50,11 +72,29 @@
   cursor: pointer;
 }
 .header_search:focus {
-  background-color: #fff;
+  background-color: #ffffff;
+}
+
+.cart_container {
+  position: relative;
 }
 
 .header_cart {
   width: 36px;
   height: 36px;
   margin-left: 8px;
+}
+
+.cart_count {
+  background-color: #5f0080;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 25%;
+  position: absolute;
+  top: 0px;
+  left: 29px;
 }

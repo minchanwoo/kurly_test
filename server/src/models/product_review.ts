@@ -1,47 +1,43 @@
 import { Model, DataTypes } from "sequelize";
+
 import { sequelize } from "./sequelize";
 
 import models from "./";
 
-class Product extends Model {}
+class ProductReview extends Model {}
 
-Product.init(
+ProductReview.init(
   {
-    name: {
+    title: {
       type: DataTypes.STRING(100),
       allowNull: false
     },
-    price: {
-      type: DataTypes.INTEGER,
+    text: {
+      type: DataTypes.TEXT,
       allowNull: false
     },
-    image_url: {
-      type: DataTypes.STRING(500),
+    rating: {
+      type: DataTypes.FLOAT,
       allowNull: false
     }
   },
   {
     sequelize,
-    modelName: "product",
+    modelName: "product_review",
     paranoid: true
   }
 );
 
-export const relationProduct = () => {
-  Product.hasMany(models.Cart, {
+export const relationProductReview = () => {
+  ProductReview.belongsTo(models.Product, {
     foreignKey: { allowNull: false },
     onDelete: "CASCADE"
   });
 
-  Product.hasMany(models.ProductQuestion, {
-    foreignKey: { allowNull: false },
-    onDelete: "CASCADE"
-  });
-
-  Product.hasMany(models.ProductReview, {
+  ProductReview.belongsTo(models.User, {
     foreignKey: { allowNull: false },
     onDelete: "CASCADE"
   });
 };
 
-export default Product;
+export default ProductReview;

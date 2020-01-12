@@ -1,10 +1,13 @@
 import { Router } from "express";
 import Product from "../models/product";
+import Cart from "../models/cart";
 
 const router = Router();
 
 router.get("/", async (req, res) => {
-  const products = await Product.findAll();
+  const products = await Product.findAll({
+    order: [["ID", "DESC"]]
+  });
   res.send({ products });
 });
 router.get("/:id", async (req, res) => {

@@ -1,0 +1,46 @@
+.login {
+  background-color: #f9f9f9;
+  height: 100%;
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+
+.login > form {
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #f3f2f4;
+  margin: 0 auto;
+  width: 630px;
+  padding: 25px 15px 25px 15px;
+}
+
+.login > form > div {
+  height: 60px;
+  line-height: 60px;
+}
+.login > form > div > label {
+  width: 150px;
+  display: inline-block;
+  color: #333;
+  font-size: 14px;
+}
+
+.login > form > div > input {
+  border: 1px solid #ccc;
+  height: 40px;
+  width: 300px;
+  outline: none;
+  border-radius: 3px;
+}
+
+.login > form > div > input::placeholder {
+  color: #ccc;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.notify {
+  font-size: 11px;
+  color: #333;
+  font-weight: 600;
+}
